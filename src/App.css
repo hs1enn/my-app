@@ -1,38 +1,94 @@
+/* App.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-image: url('./bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+}
+
 .App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form {
+  width: 400px;
+  margin-top: 20px;
+  padding: 40px;
+  padding-right: 55px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-image: linear-gradient(to left, #3F2182, #13072E);
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form-group {
+  margin-bottom: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+label {
+  display: block;
+  color: #fff;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+h1 {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px; /* Add margin to separate from the error notice */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.error {
+  color: red;
+  margin-top: 5px; /* Add margin to separate from the input */
+  text-align: left;
+  font-size: 12px; /* Adjust font size as needed */
+}
+
+.error-notice {
+  position: absolute;
+  bottom: -30px; /* Position below the password input */
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid red;
+  border-radius: 3px;
+  color: red;
+  text-align: left;
+  animation: dropdown 0.3s ease;
+}
+
+@keyframes dropdown {
+  0% { bottom: -30px; }
+  100% { bottom: 0; }
 }

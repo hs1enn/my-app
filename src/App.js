@@ -1,5 +1,3 @@
-// App.js
-
 import React, { useState } from 'react';
 import './App.css';
 
@@ -46,7 +44,6 @@ const App = () => {
 
     if (!emailError && !passwordErrors.length) {
       console.log(formData);
-      // Implement authentication logic here
     }
   };
 
